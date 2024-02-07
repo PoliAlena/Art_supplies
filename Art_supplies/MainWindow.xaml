@@ -1,0 +1,30 @@
+﻿<Window x:Class="Art_supplies.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Art_supplies"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1500"
+         Background="#F2B2A1">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"></RowDefinition>
+
+            <RowDefinition Height="350*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Frame x:Name="Frm" Content="Frame" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1500" Height="784" Grid.RowSpan="2" >
+            <UIElement.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </UIElement.RenderTransform>
+        </Frame>
+    </Grid>
+</Window>

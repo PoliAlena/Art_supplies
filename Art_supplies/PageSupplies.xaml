@@ -1,0 +1,105 @@
+﻿<Page x:Class="Art_supplies.PageSupplies"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Art_supplies"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1500"
+      Title="PageSupplies"
+      Background="#F2B2A1"
+      Height="800" Width="1500">
+
+    <Grid Width="1500" Height="700">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="497"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <ListView x:Name="ListProducts" ScrollViewer.CanContentScroll="False"  Margin="0,119,0,-166" RenderTransformOrigin="0.499,0.593" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="2" Width="1500" Background="#C79B8E" FontFamily="Bahnschrift Condensed" FontSize="16" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="700"/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Width="auto" Orientation="Vertical" HorizontalAlignment="Left" Margin="10,10,10,10">
+                            <Image Source="{Binding CurrentPhoto}"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Width="auto" Orientation="Vertical" HorizontalAlignment="Left">
+                            <TextBlock Width="auto" TextWrapping="Wrap" Height="auto">
+                <Run Text="Артикул: "/>
+                <Run Text="{Binding Articul}"/>
+                            </TextBlock>
+                            <TextBlock Width="auto" TextWrapping="Wrap" Height="auto">
+                <Run Text="Название продукта : "/>
+                <Run Text="{Binding Names_products.Name}"/>
+                            </TextBlock>
+                            <TextBlock Width="auto" TextWrapping="Wrap" Height="auto">
+                <Run Text="Стоимость: "/>
+                <Run Text="{Binding Cost}"/>
+                            </TextBlock>
+                            <TextBlock Width="auto" TextWrapping="Wrap" Height="auto">
+                <Run Text="Максимальная скидка: "/>
+                <Run Text="{Binding Max_discount}"/>
+                            </TextBlock>
+                            <TextBlock Width="auto" TextWrapping="Wrap" Height="auto">
+                <Run Text="Производитель: "/>
+                <Run Text="{Binding Manufacturers.Name}"/>
+                            </TextBlock>
+                            <TextBlock Width="auto" TextWrapping="Wrap" Height="auto">
+                <Run Text="Поставщик: "/>
+                <Run Text="{Binding Providers.Name}"/>
+                            </TextBlock>
+                            <TextBlock Width="auto" TextWrapping="Wrap" Height="auto">
+                <Run Text="Категория товара: "/>
+                <Run Text="{Binding Categories.Category}"/>
+                            </TextBlock>
+                            <TextBlock Width="auto" TextWrapping="Wrap" Height="auto">
+                <Run Text="Описание товара: "/>
+                <Run Text="{Binding Description}"/>
+                            </TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Column="3" Width="auto" Orientation="Vertical" HorizontalAlignment="Left">
+                            <TextBlock Width="auto" TextWrapping="Wrap" Height="auto">
+                <Run Text="На складе: "/>
+                <Run Text="{Binding In_stock}"/>
+                            </TextBlock>
+                            <TextBlock Width="auto" TextWrapping="Wrap" Height="auto">
+                <Run Text="Ед.измерения: "/>
+                <Run Text="{Binding Units.Name}"/>
+                            </TextBlock>
+                            <TextBlock Width="auto" TextWrapping="Wrap" Height="auto">
+                <Run Text="Действующая скидка: "/>
+                <Run Text="{Binding Real_discount}"/>
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ContextMenu>
+                <ContextMenu Name="cm">
+                    <MenuItem x:Name="del" Header="Delete" Click="del_Click"/>
+                    <MenuItem x:Name="add_b" Header="Add" Click="add_b_Click"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
+
+        </ListView>
+        <TextBlock x:Name="tbCounter" Text="Не найдено" Width="150" HorizontalAlignment="Left" Height="22" Margin="1242,10,0,465" FontFamily="Bahnschrift Condensed" FontSize="16" FontWeight="Bold" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,21,0,0" TextWrapping="Wrap" Text="Поиск" VerticalAlignment="Top" Grid.Row="1" Height="19" Width="195" FontSize="20" FontFamily="Bahnschrift Condensed"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="795,44,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="77" Click="Button_Click"/>
+        <TextBox x:Name="Search" HorizontalAlignment="Left" Margin="24,52,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="319" Height="28" FontSize="16" FontFamily="Bahnschrift Light Condensed"/>
+        <ComboBox x:Name="Sort" HorizontalAlignment="Left" Margin="364,50,0,0" Grid.Row="1" VerticalAlignment="Top" Width="185" Height="28"/>
+        <ComboBox x:Name="Filtr" HorizontalAlignment="Left" Margin="572,50,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178" Height="28"/>
+        <TextBlock HorizontalAlignment="Left" Margin="364,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Height="19" Width="195" FontSize="20" FontFamily="Bahnschrift Condensed"><Run Language="ru-ru" Text="Сортировка"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="572,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Height="19" Width="195" FontSize="20" FontFamily="Bahnschrift Condensed"><Run Language="ru-ru" Text="Фильтрация"/></TextBlock>
+        <Button Content="Button1" HorizontalAlignment="Left" Margin="1392,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="77" Click="Button1_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="1392,66,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click_1"/>
+    </Grid>
+</Page>

@@ -1,0 +1,37 @@
+﻿<Page x:Class="Art_supplies.add"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Art_supplies"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="add">
+
+    <Grid Background="#FFEDC4C4">
+        <Button Content="Button" HorizontalAlignment="Left" Margin="514,393,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="120,303,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="desc" HorizontalAlignment="Left" Margin="569,260,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="max" HorizontalAlignment="Left" Margin="569,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="real_dis" HorizontalAlignment="Left" Margin="569,169,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="cost" HorizontalAlignment="Left" Margin="176,260,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="stock" HorizontalAlignment="Left" Margin="176,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="articul" HorizontalAlignment="Left" Margin="176,72,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="name" HorizontalAlignment="Left" Margin="176,116,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="categ" HorizontalAlignment="Left" Margin="569,116,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="prov" HorizontalAlignment="Left" Margin="176,307,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="unit" HorizontalAlignment="Left" Margin="176,169,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="manuf" HorizontalAlignment="Left" Margin="569,72,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="120,252,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="120,208,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="120,165,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="120,116,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="120,68,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="496,256,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="496,216,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="496,162,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="496,116,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="496,68,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>
